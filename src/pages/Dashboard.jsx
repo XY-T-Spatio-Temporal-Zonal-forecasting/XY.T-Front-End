@@ -102,7 +102,7 @@ export default function Dashboard() {
                             </div>
                             <div>
                                 <h1 className="text-2xl font-bold text-white">
-                                    Football Trajectory Forecasting
+                                    XY.T
                                 </h1>
                                 <p className="text-sm text-gray-400">
                                     TCN Deep Learning Model

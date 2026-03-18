@@ -8,6 +8,6 @@ proxy: {
 "/api": "http://localhost:8000",
 },
 },
-base: '/XY-T-Spatio-Temporal-Zonal-forecasting/XY.T-Front-End/',
+base: '/XY.T-Front-End/',
 plugins: [react()],
 });

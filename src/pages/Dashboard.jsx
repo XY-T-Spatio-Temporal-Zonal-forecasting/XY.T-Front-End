@@ -6,7 +6,6 @@ import PitchVisualization from '../components/PitchVisualization';
 import SelectionPanel from '../components/SelectionPanel';
 import TemporalControl from '../components/TemporalControl';
 import TacticalCoach from '../components/TacticalCoach';
-import mockService from '../services/mockService';
 import apiService from '../services/apiService';
 
 export default function Dashboard() {

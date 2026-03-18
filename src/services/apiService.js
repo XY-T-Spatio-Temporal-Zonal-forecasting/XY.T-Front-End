@@ -1,5 +1,5 @@
 // API Service for Football Trajectory Forecasting
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 class ApiService {
 /**
@@ -10,6 +10,9 @@ async getGames() {
 try {
 const response = await fetch(`${API_BASE_URL}/match/all`, {
 cache: "no-store",
+headers: {
+"ngrok-skip-browser-warning": true,
+},
 });
 console.log("API Response for games:", response);
 if (!response.ok) throw new Error("Failed to fetch games");
@@ -29,6 +32,9 @@ async getPlayers(match_id) {
 try {
 const response = await fetch(`${API_BASE_URL}//match/${match_id}/players`, {
 cache: "no-store",
+headers: {
+"ngrok-skip-browser-warning": true,
+},
 });
 if (!response.ok) throw new Error("Failed to fetch players");
 return await response.json();
@@ -79,9 +85,9 @@ try {
 const response = await fetch(`${API_BASE_URL}/match/forecast`, {
 method: "POST",
 cache: "no-store",
-
 headers: {
 "Content-Type": "application/json",
+"ngrok-skip-browser-warning": true,
 },
 body: JSON.stringify(payload),
 });
@@ -101,10 +107,12 @@ throw error;
 async getForecastTimeline(payload) {
 try {
 const response = await fetch(`${API_BASE_URL}/match/forecast/timeline`, {
-method: "POST",  cache: "no-store",
+method: "POST",
+cache: "no-store",
 
 headers: {
 "Content-Type": "application/json",
+"ngrok-skip-browser-warning": true,
 },
 body: JSON.stringify(payload),
 });
@@ -125,10 +133,12 @@ async getTacticalAnalysis(payload) {
 try {
 const response = await fetch(`${API_BASE_URL}/match/tactical-analysis`, {
 method: "POST",
-headers: { "Content-Type": "application/json" },
+headers: {
+"Content-Type": "application/json",
+"ngrok-skip-browser-warning": true,
+},
 body: JSON.stringify(payload),
-  cache: "no-store"
-
+cache: "no-store",
 });
 if (!response.ok) throw new Error("Failed to get tactical analysis");
 return await response.json();

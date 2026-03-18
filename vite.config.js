@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 server: {
 proxy: {
-"/api": " https://unrocky-contradictious-alberta.ngrok-free.dev",
+"/api": "https://unrocky-contradictious-alberta.ngrok-free.dev",
 },
 },
 base: '/XY.T-Front-End/',
